@@ -1,0 +1,6 @@
+rootProject.name = 'KeychainExample'
+
+include ':app'
+include ':reactnativekeychain'
+
+project(':reactnativekeychain').projectDir = new File(rootProject.projectDir, '../../android')
