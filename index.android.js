@@ -89,6 +89,7 @@ var Keychain = {
   ): Promise {
     return new Promise((resolve, reject) => {
       RNKeychainManager.protect('generic-' + (service ? service : 'default'), JSON.stringify({username: username, password: password}));
+      resolve();
     });
   },
 
@@ -130,6 +131,7 @@ var Keychain = {
   ): Promise {
     return new Promise((resolve, reject) => {
       RNKeychainManager.remove('generic-' + (service ? service : 'default'));
+      resolve();
     });
   },
 
